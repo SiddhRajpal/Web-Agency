@@ -1,85 +1,259 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Siddhu Web Agency</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Iron Pulse Fitness</title>
 
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Trebuchet MS', sans-serif;
-      background: linear-gradient(135deg, #667eea, #764ba2);
-      color: white;
-      text-align: center;
-    }
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
-    nav {
-      background: rgba(0,0,0,0.3);
-      padding: 15px;
-    }
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #0f172a;
+  color: #e2e8f0;
+  line-height: 1.6;
+}
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
 
-    header {
-      padding: 100px 20px;
-    }
+header {
+  background: #0b1120;
+  padding: 20px 0;
+  border-bottom: 1px solid #1e293b;
+}
 
-    h1 {
-      font-size: 45px;
-    }
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-    p {
-      max-width: 700px;
-      margin: 20px auto;
-      font-size: 18px;
-      line-height: 1.6;
-    }
+.logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 24px;
+  color: #22d3ee;
+}
 
-    footer {
-      padding: 20px;
-      background: rgba(0,0,0,0.3);
-      margin-top: 80px;
-    }
-  </style>
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #cbd5e1;
+  font-weight: 500;
+}
+
+nav a:hover {
+  color: #22d3ee;
+}
+
+.hero {
+  padding: 120px 0;
+  text-align: center;
+  background: linear-gradient(to right, #0f172a, #111827);
+}
+
+.hero h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: #22d3ee;
+}
+
+.hero p {
+  max-width: 600px;
+  margin: auto;
+  margin-bottom: 30px;
+  color: #94a3b8;
+}
+
+.btn {
+  padding: 14px 30px;
+  background: #22d3ee;
+  color: #0f172a;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.3s ease;
+}
+
+.btn:hover {
+  background: #06b6d4;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  font-size: 32px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.about {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  color: #94a3b8;
+}
+
+.trainers-grid,
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.card {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(34, 211, 238, 0.2);
+}
+
+.card h3 {
+  margin-bottom: 10px;
+  color: #22d3ee;
+}
+
+.price {
+  font-size: 28px;
+  margin: 15px 0;
+}
+
+.contact {
+  text-align: center;
+  color: #94a3b8;
+}
+
+footer {
+  background: #0b1120;
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid #1e293b;
+  font-size: 14px;
+  color: #64748b;
+}
+</style>
 </head>
 
 <body>
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
-  </nav>
+<header>
+  <div class="container">
+    <nav>
+      <div class="logo">IRON PULSE</div>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#trainers">Trainers</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
 
-  <header>
-    <h1>Siddhu Web Agency</h1>
+<section class="hero">
+  <div class="container">
+    <h1>Train Hard. <span>Stay Relentless.</span></h1>
+    <p>Iron Pulse Fitness is a next-generation training facility built for athletes, bodybuilders, and high-performers who demand elite results.</p>
+    <a href="#pricing" class="btn">View Memberships</a>
+  </div>
+</section>
 
-    <p>
-      At Siddhu Web Agency, we help local businesses establish a powerful online presence 
-      through modern, responsive, and high-converting websites. 
-      Our mission is simple — turn visitors into customers.
-      Whether you're a restaurant, gym, real estate agency, or retail store, 
-      we design websites that reflect your brand, build trust, and drive real growth.
-    </p>
+<section id="about">
+  <div class="container">
+    <h2 class="section-title">About Us</h2>
+    <div class="about">
+      <p>Located in Downtown Mumbai, Iron Pulse Fitness combines cutting-edge equipment, performance-focused programming, and certified elite trainers to deliver measurable results. Our 15,000 sq. ft. facility includes strength zones, HIIT arenas, recovery lounges, and personalized coaching studios.</p>
+    </div>
+  </div>
+</section>
 
-    <p>
-      We focus on clean design, fast performance, mobile responsiveness,
-      and SEO fundamentals so your business stands out in today’s digital world.
-      Let us handle the technical side while you focus on running your business.
-    </p>
-  </header>
+<section id="trainers">
+  <div class="container">
+    <h2 class="section-title">Elite Trainers</h2>
+    <div class="trainers-grid">
+      <div class="card">
+        <h3>Arjun Mehta</h3>
+        <p>Strength & Conditioning Specialist</p>
+      </div>
+      <div class="card">
+        <h3>Riya Kapoor</h3>
+        <p>Certified Personal Trainer & Nutrition Coach</p>
+      </div>
+      <div class="card">
+        <h3>Daniel Ross</h3>
+        <p>HIIT & Performance Coach</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <footer>
-    © 2026 Siddhu Web Agency
-  </footer>
+<section id="pricing">
+  <div class="container">
+    <h2 class="section-title">Membership Plans</h2>
+    <div class="pricing-grid">
+      <div class="card">
+        <h3>Basic</h3>
+        <div class="price">₹2,999/mo</div>
+        <p>Access to gym floor & equipment</p>
+      </div>
+      <div class="card">
+        <h3>Pro</h3>
+        <div class="price">₹4,999/mo</div>
+        <p>Gym + Group Classes + HIIT Arena</p>
+      </div>
+      <div class="card">
+        <h3>Elite</h3>
+        <div class="price">₹8,999/mo</div>
+        <p>All Access + Personal Coaching</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container">
+    <h2 class="section-title">Contact Us</h2>
+    <div class="contact">
+      <p>📍 42 Orion Business Park, Andheri East, Mumbai, India</p>
+      <p>📞 +91 98765 43210</p>
+      <p>📧 contact@ironpulsefitness.com</p>
+      <p>Open: Mon–Sat | 5:00 AM – 11:00 PM</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Iron Pulse Fitness. All Rights Reserved.</p>
+</footer>
 
 </body>
 </html>
